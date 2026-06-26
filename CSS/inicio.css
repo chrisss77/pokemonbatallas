@@ -1,0 +1,236 @@
+a{
+  text-decoration: none !important;
+}
+.fondobarra {
+    background-color: #d9d9d9;
+    height: 70px;
+}
+#logo_show{
+  margin: 11px 0px 0px 20px;
+}
+.logoabajo {
+  margin-top: 10px;
+}
+.logoderecho {
+  float: right;
+}
+#asharriba {
+  margin: -6px 10px 0px 0px;
+  width: 82px;
+  height: 82px;
+}
+#toggleModeBtn{
+  position: absolute;
+}
+
+.colorceleste {
+  background-color: #7fa7d1 !important;
+}
+.colornaranja {
+  background-color: #e66e28 !important;
+}
+.colorgris {
+  background-color: #BCBCBC !important;
+}
+.letranegro {
+  color: black !important;
+}
+.tamañobotones {
+  height: 50px;
+  width: 250px;
+  max-width: 400px !important;
+
+}
+.redondear {
+  border-radius: 50px !important;
+}
+.tamañobotone2 {
+  height: 50px;
+  width: 250px;
+  max-width: 400px !important;
+}
+.tamañobotoninicio {
+  height: 50px;
+}
+.separarbotones2{
+  margin-right: 10px;
+}
+.separarbotones{
+  display: grid;
+  gap: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/charizard2.webp);
+    background-size: cover;
+}
+/* BLOQUE específico del inicio — sustituye .formato por .formato-inicio */
+.formato-inicio {
+  display: flex;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.459);
+  border-radius: 30px;
+  border: #000000 2px solid;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.formato-inicio.separarbotones.borrosidad {
+  margin-top: 0;
+}
+
+
+.borrosida {
+  filter: blur(4px);
+  
+}
+.center {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoncombinado {
+    padding: 10px 20px;
+    border: 1px solid black;
+    text-align: center; 
+    margin: 5px;
+}
+.texto-grande {
+  font-size: 20px; 
+  font-weight: bold;
+}
+.letragruesa {
+  font-weight: bold !important;
+}
+
+.texto-pequeño {
+  font-size: 16px;
+  display: block;
+  margin-top: -10px;/
+}
+
+
+
+
+.tituloCaja {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+
+.cajaPokemon {
+  display: grid;
+  /* Responsive columnas: se adaptan al ancho disponible */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px; 
+  background-color: rgb(211, 248, 248); 
+  padding: 20px;
+  border-radius: 30px;
+  transform-origin: center;
+  margin: 0 auto;
+}
+
+/* Ajustes en pantallas pequeñas y configuración de columnas y tarjetas de pokemon */
+@media (max-width: 576px) {
+  .cajaPokemon {
+    gap: 12px;
+    padding: 16px;
+    grid-template-columns: repeat(auto-fit , minmax(120px, 1fr));
+  }
+  .spritePokemon {
+    width: 72px;
+    height: 72px;
+  }
+  .nombrePokemon { 
+    font-size: 15px; 
+  }
+  .descripcionPokemon { 
+    font-size: 11px; 
+  }
+}
+
+
+.tarjetaPokemon {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+
+.tarjetaPokemon:hover {
+  transform: scale(1.05);
+}
+
+.nombrePokemon {
+  font-size: 16px;
+  margin: 8px 0 4px 0;
+}
+
+
+.descripcionPokemon {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+}
+
+
+.spritePokemon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 8px auto;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.spritePokemon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================= Filtros ================= */
+.filters {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter.selected {
+  background-color: #c4c4f7;
+  border-color: #888;
+}
+
+/* Layout  (cabecera + sección principal) */
+.contenedorSeccionPrincipal {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 100px;
+}
+.contenedorSeccionPrincipal > section {
+  flex: 1 1 auto;
+}
+
+/* asegura que los títulos no empujen elementos para abajo */
+.contenedorSeccionPrincipal h1 {
+  margin-top: 0;
+}

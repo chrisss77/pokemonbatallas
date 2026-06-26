@@ -1,0 +1,312 @@
+/* "Selectores Globales" */
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/fondo_charizard.webp);
+    background-size: cover
+
+
+}
+label{
+    color: #000000;
+}
+
+/* "Selectores por Clase" */
+.avatar-section {
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    background:  #d3e6eb;
+    border-radius: 50px;
+    border: #000000 2px solid;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    margin-left: 150px;
+    text-align: center; 
+}
+.avatar-section h2 {
+  font-family: '8bit16', sans-serif;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px; 
+}
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 15px;
+  justify-items: center; 
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 5px;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 8px #4fc3f7;
+  background-color: rgba(255,255,255,0.6);
+}
+
+.avatar.selected {
+  border: 3px solid #4cafef;
+  box-shadow: 0px 0px 10px #4fc3f7;
+  background-color: rgba(255,255,255,0.8);
+}
+
+
+.centerimg{
+    margin: auto;
+    background-color: #E1E8E8;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.fondobarra{
+    background-color: #d9d9d9;
+    height: 70px;
+}
+#logo_show{
+    margin: 11px 0px 0px 20px;
+}
+.logoabajo{
+    margin-top: 10px;
+}
+.logoderecho{
+    float: right;
+    margin: -6px 10px 0px 0px;
+}
+.usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control{
+    margin: auto;
+    width: 85%;
+}
+.form-label{
+    margin-left: 20px;
+}
+.col-form-label{
+    margin-left: 20px;
+}
+
+/* "Selectores por ID" */
+#registro{
+    margin-top: 65px;
+    float: right;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.459);
+  
+    
+}
+#boton1{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+#imgpikachu{
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ------------------- Barra lateral ------------------- */
+.sidebar {
+    width: 60px;
+    background: #cfd8dc;       /* gris claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position:fixed;
+}
+
+/* Botones de la barra lateral */
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;   
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Nuevo contenedor para íconos */
+.icon-wrapper {
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: 0.3s ease;
+}
+
+/* Círculo violeta SOLO para botón activo */
+.nav-btn.active .icon-wrapper {
+    background: #b0bec5;        /* fondo gris del ícono */
+    border: 2px solid #b400b4;  /* círculo violeta */
+    box-shadow: 0 0 8px #b400b4; /* efecto glow */
+    padding: 10px;
+
+}
+
+.nav-btn:hover {
+    color: rgb(180, 26, 180);
+}
+
+.nav-btn span {
+    font-size: 13px;
+}
+
+/* Cambia el color del texto del botón activo a violeta */
+.nav-btn.active span {
+    color: #b400b4;
+    font-weight: bold;
+}
+
+/* Cambia el color (trazo) del ícono estrella cuando está activo */
+.nav-btn.active svg {
+    stroke: #b400b4;
+}
+/* ------------------ Estilos responsive para celular ------------------ */
+@media (max-width: 600px) {
+  /* Fondo general */
+  body {
+    padding: 10px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* Ocultar barra lateral */
+  .sidebar {
+    display: none;
+  }
+
+  /* Avatar section */
+  .avatar-section {
+    max-width: 95%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .avatar-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .avatar-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+  }
+
+  /* Imagen central */
+  .centerimg {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Formulario */
+  .form-control {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form-label,
+  .col-form-label {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  /* Botón de formulario */
+  #boton1 {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Registro */
+  #registro {
+    width: 100%;
+    float: none;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  /* Logo y barra */
+  .fondobarra {
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logoabajo,
+  .logoderecho {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Navegación (opcional si mantienes botones) */
+  .nav-btn {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .icon-wrapper {
+    padding: 10px;
+  }
+
+  .nav-btn span {
+    display: block;
+    margin-top: 5px;
+  }
+
+  /* Imagen Pikachu */
+  #imgpikachu {
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+
+

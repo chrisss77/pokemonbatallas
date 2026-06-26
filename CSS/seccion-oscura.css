@@ -1,0 +1,73 @@
+/* seccion-oscura.css
+   Estilos DE COLOR para modo oscuro (no tocar layout).
+   Úsalo junto a theme-style (modo barra) para oscurecer secciones.
+*/
+
+/* Nota: solo propiedades de color / fondos / bordes / transiciones. */
+
+/* Contenedores principales: fondo translúcido oscuro + texto blanco */
+.main-container,
+.fondoCaja,
+.formato-inicio,
+.formato-crear {
+  background-color: rgba(0, 0, 0, 0.70) !important; /* fondo oscuro translúcido */
+  color: #ffffff !important;                         /* texto blanco */
+  border-color: rgba(255,255,255,0.06) !important;   /* borde más sutil */
+}
+
+/* Cards: mantener la estructura, solo cambiar colores */
+.card {
+  background-color: rgba(0, 0, 0, 0.60) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Titulares y textos fuertes */
+.main-container h1,
+.main-container h2,
+.header h1,
+.formato-inicio h1,
+.formato-crear h1,
+.letragruesa {
+  color: #ffffff !important;
+}
+
+/* Clases que forzaban texto negro en modo claro: sobrescribir solo color */
+.letranegro {
+  color: #ffffff !important;
+}
+
+/* Mantener los colores de los elementos "de marca" (ej. botones celeste/naranja)
+   pero asegurar contraste. No cambiar su tamaño ni padding. */
+.filter.selected {
+  background-color: #7fa7d1 !important; /* mismo celeste */
+  color: #ffffff !important;
+}
+.filter {
+  color: #7fa7d1 !important;
+  border-color: rgba(127,167,209,0.6) !important;
+  background-color: transparent !important;
+}
+
+/* Barra lateral (solo color / fondo) */
+.sidebar {
+  background-color: #262424 !important;
+}
+.nav-btn, .nav-btn span {
+  color: #ffffff !important;
+}
+
+/* Transición suave de color (no cambia layout) */
+.main-container,
+.fondoCaja,
+.card,
+.formato-inicio,
+.formato-crear {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0.2rem 0 0;
+  color: black;
+}

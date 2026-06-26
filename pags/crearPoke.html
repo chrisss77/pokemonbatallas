@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/creacion.css">
+   <link id="theme-style" rel="stylesheet" href="../CSS/barra.css" />
+    <link id="seccion-style" rel="stylesheet" href="">
+    <link rel="stylesheet" href="../CSS/toggle_barra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+    <header class="fondobarra">
+      <img src="../img/logo.png" alt="logo" id="logo_show">
+      <img src="../img/ash.png" alt="logo_ash" class="logoderecho" height="82px">
+      </header>    
+<body>
+<div class="contenedorSeccionPrincipal">
+  <button id="toggleModeBtn" title="Cambiar modo">Modo oscuro</button>
+        <header id="barra">
+          <div class="sidebar">
+            <a href="./barra.html" class="nav-btn">
+              <div class="icon-wrapper">
+                <i data-lucide="star"></i>
+              </div>
+              <span>Inicio</span>
+            </a>
+            <a href="./equipo.html" class="nav-btn">
+              <div class="icon-wrapper">
+                <i data-lucide="star"></i>
+              </div>
+              <span>Equipos</span>
+            </a>
+            <a href="./cajas.html" class="nav-btn">
+              <div class="icon-wrapper">
+                <i data-lucide="star"></i>
+              </div>
+              <span>Cajas</span>
+            </a>
+            <a href="./crearPoke.html" class="nav-btn active">
+              <div class="icon-wrapper">
+                <i data-lucide="star"></i>
+              </div>
+              <span>Crear equipo</span>
+            </a>
+            <a href="./pokedex.html" class="nav-btn">
+              <div class="icon-wrapper">
+                <i data-lucide="star"></i>
+              </div>
+              <span>Pokedex</span>
+            </a>
+          </div>
+        </header>
+<div class="card">
+  <div class="formato-center">
+       <h1 class="center">Creador de equipo</h1>
+       <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle center" type="button" data-bs-toggle="dropdown" aria-expanded="false">seleccione el formato</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">3vs3</a></li>
+    <li><a class="dropdown-item" href="#">2vs2</a></li>
+    <li><a class="dropdown-item" href="#">1vs1</a></li>
+  </ul>
+</div></div>
+<section class="div">
+
+  <div>
+    <div class="contenedor-nombre-detalles">
+      <form class="form-floating">
+        <input type="text" class="form-control" id="floatingInputValue">
+        <label for="floatingInputValue">Mote</label>
+      </form>
+
+      <div class="detalles">
+        <h5>Detalles</h5>
+      </div>
+    </div>
+
+    <div>
+      <img src="" class="img-top" alt="">
+    </div>
+
+    <div class="ajuste">
+      <div class="margen">
+        <h5 class="title">Pokemon</h5>
+        <input id="pokeInput" class="text">
+      </div>
+      <div>
+        <h5 class="title">Items</h5>
+        <input class="text">
+      </div>
+      <div>
+        <h5 class="title">Habilidad</h5>
+        <input class="text">
+      </div>
+    </div>
+
+    <div class="contenedor-mov-estad">
+      <div class="separacion">
+        <h5 class="title">Movimientos</h5>
+        <div class="mov">
+          <input class="text" />
+          <input class="text" />
+        </div>
+        <div class="mov">
+          <input class="text" />
+          <input class="text" />
+        </div>
+      </div>
+      <!-- Contenedores del menú dinámico -->
+      <div id="moveMenuContainer"></div>
+      <div id="filterPanelContainer"></div>
+
+      <div class="estadisticas">
+        <h5 >Estadísticas</h5>
+        <div id="pokeInfo">
+
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+  </div>
+
+</section>
+
+<div class="contenedor-boton-anadir">
+  <button class="btn-anadir">
+    <span class="icono">＋</span>
+    Añadir Pokémon
+  </button>
+</div>
+
+</div>
+</section>
+</div>
+<footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="../js/crearPoke.js"></script>
+  <script src="../js/barra.js"></script>
+</body>
+
+</html>
+
+
+

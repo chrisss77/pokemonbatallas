@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="../CSS/pokeDex.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link id="theme-style" rel="stylesheet" href="../CSS/barra.css">
+  <link rel="stylesheet" href="../CSS/toggle_barra.css">
+</head>
+    <header class="fondobarra">
+      <a href="../pags/barra.html">
+        <img src="../img/logo.png" alt="logo" class="logoabajo">
+      </a>
+      <img src="../img/ash.png" alt="logo_ash" class="logoderecho" height="82px">
+      </header>  
+<body id="body">
+  <h1>Pokédex</h1>
+
+  <div class="contenedorBusqueda">
+    <div class="search-container">
+      <input type="text" id="pokeBusqueda" placeholder="Buscar por nombre o ID">
+      <ul id="suggestions" class="suggestions-list"></ul>
+    </div>
+    <button id="searchBtn">Buscar</button>
+  </div>
+
+
+  <section class="lista" id="pokeLista"></section>
+  <div class="load-more-container">
+    <button id="loadMoreBtn">Mostrar más Pokemon</button>
+  </div>
+
+  <div id="Detalle">
+    <h2>Selecciona un Pokémon</h2>
+  </div>
+<button id="toggleModeBtn" title="Cambiar modo">Modo oscuro</button>
+  <script src="../js/pokedeX.js"></script>
+  <script src="../js/barra.js"></script>
+</body>
+</html>

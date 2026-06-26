@@ -1,0 +1,73 @@
+/* ------------------- Barra lateral ------------------- */
+.sidebar {
+    width: 60px;
+    background: #cfd8dc;       /* gris claro */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.toggleModeBtn{
+    margin-top: auto;
+}
+#barra {
+    max-width: 150px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Botones de la barra lateral */
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;   
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Nuevo contenedor para íconos */
+.icon-wrapper {
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: 0.3s ease;
+}
+
+/* Círculo violeta SOLO para botón activo */
+.nav-btn.active .icon-wrapper {     
+    border: 2px solid #108dbe;  /* círculo violeta */
+    box-shadow: 0 0 8px #108dbe; /* efecto glow */
+    padding: 10px;
+
+}
+
+.nav-btn:hover {
+    color: #108dbe;
+}
+
+.nav-btn span {
+    font-size: 13px;
+}
+
+/* Cambia el color del texto del botón activo a violeta */
+.nav-btn.active span {
+    color: #108dbe;
+    font-weight: bold;
+}
+
+/* Cambia el color (trazo) del ícono estrella cuando está activo */
+.nav-btn.active svg {
+    stroke: #108dbe;
+}

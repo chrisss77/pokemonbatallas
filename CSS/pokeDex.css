@@ -1,0 +1,337 @@
+.lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: baseline;
+}
+/* ------------------------- Barra Horizontal ------------------------- */
+
+.fondobarra {
+  position: fixed;          
+  top: 0;                  
+  left: 0;                  
+  width: 100vw;              
+  height: 70px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  margin: 0;                
+  padding: 0 20px;         
+  box-sizing: border-box;    
+}
+
+.logoderecho {
+  float: right;
+  margin-right: 5px;
+}
+
+/* ------------------------- General ------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #3b4cca;
+}
+
+/* ------------------------- Busqueda e input ------------------------- */
+.contenedorBusqueda{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#pokeBusqueda{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+    font-size: 14px;
+}
+
+#searchBtn{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b4cca;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#searchBtn:hover{
+    background-color: #2a35a0;
+}
+
+.load-more-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#loadMoreBtn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b4cca;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#loadMoreBtn:hover{
+    background-color: #2a35a0;
+}
+/* ------------------------- Lista de Pokémon ------------------------- */
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pokeCard {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 120px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.pokeCard:hover {
+    transform: scale(1.05);
+}
+
+.pokeCard img {
+    width: 80px;
+    height: 80px;
+}
+
+/* ------------------------- Card de detalle ------------------------- */
+#Detalle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.detalle-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.detalle-card img {
+    width: 200px;
+    margin: 15px 0;
+}
+
+/* ------------------------- Tipos ------------------------- */
+.tipos {
+    margin: 15px 0;
+}
+
+.tipo-lista {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tipo {
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+/* ------------------------- Habilidades ------------------------- */
+.habilidades {
+    margin: 15px 0;
+}
+
+.habilidad-lista {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.habilidad {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: #444;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ------------------------- Stats ------------------------- */
+.stats {
+    margin: 15px 0;
+}
+
+.stat-container {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    gap: 10px;
+}
+
+.stat-name {
+    width: 80px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.stat-bar-background {
+    flex: 1;
+    background: #eee;
+    height: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.stat-value {
+    width: 40px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* ------------------------- Ataques ------------------------- */
+#toggleAtaques {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b4cca;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: background 0.2s ease;
+    margin-bottom: 10px;
+}
+  
+#toggleAtaques:hover {
+    background-color: #2a35a0;
+}
+  
+#listaAtaques {
+    margin-top: 15px;
+    max-height: 0;
+    opacity: 0;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0 10px;
+    background: #f9f9f9;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+}
+  
+#listaAtaques.visible {
+    max-height: 500px;
+    opacity: 1;
+    padding: 10px;
+}
+
+.ataque{
+    border-radius: 12px; 
+}
+/* ------------------------- Colores por tipo ------------------------- */
+.tipo.normal, .ataque.normal { background-color: #A8A77A; }
+.tipo.fire, .ataque.fire { background-color: #EE8130; }
+.tipo.water, .ataque.water { background-color: #6390F0; }
+.tipo.electric, .ataque.electric { background-color: #F7D02C; color:#000; }
+.tipo.grass, .ataque.grass { background-color: #7AC74C; color:#000; }
+.tipo.ice, .ataque.ice { background-color: #96D9D6; color:#000; }
+.tipo.fighting, .ataque.fighting { background-color: #C22E28; }
+.tipo.poison, .ataque.poison { background-color: #A33EA1; }
+.tipo.ground, .ataque.ground { background-color: #E2BF65; color:#000; }
+.tipo.flying, .ataque.flying { background-color: #A98FF3; }
+.tipo.psychic, .ataque.psychic { background-color: #F95587; }
+.tipo.bug, .ataque.bug { background-color: #A6B91A; color:#000; }
+.tipo.rock, .ataque.rock { background-color: #B6A136; color:#000; }
+.tipo.ghost, .ataque.ghost { background-color: #735797; }
+.tipo.dragon, .ataque.dragon { background-color: #6F35FC; }
+.tipo.dark, .ataque.dark { background-color: #705746; }
+.tipo.steel, .ataque.steel { background-color: #B7B7CE; color:#000; }
+.tipo.fairy, .ataque.fairy { background-color: #D685AD; }
+
+/* =================== AUTOCOMPLETADO =================== */
+.search-container {
+  position: relative; /* 🔹 Para que las sugerencias se ubiquen respecto al input */
+  display: inline-block;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;              /* 🔹 Ahora se ubica justo debajo del input */
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;            /* 🔹 Igual ancho que el input */
+  margin-top: 4px;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+  display: none;          /* 🔹 Oculto por defecto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.suggestions-list li {
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-left: 6px solid transparent;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .suggestions-list {
+    width: 100%;
+  }
+}

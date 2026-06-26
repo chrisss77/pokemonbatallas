@@ -1,0 +1,223 @@
+/*CAJASSSSSSSSS*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/charizard2.webp);
+    background-size: cover;
+}
+#toggleModeBtn{
+  position: absolute !important;
+}
+.fondobarra {
+  background-color: #d9d9d9;
+  height: 70px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+#logo_show{
+  margin: -5px 0px 0px 20px;
+}
+.logoderecho {
+  float: right;
+  width: 82px;
+  height: 82px;
+  margin: 0px 10px 0px 0px;
+}
+a{
+  text-decoration: none !important;
+}
+.formato {
+    display: flex;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.349);
+    border-radius: 30px;
+    border: #000000 2px solid;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fondoCaja {
+  padding: 30px; 
+  margin: 20px auto;
+  max-width: 800px; 
+  background: rgba(255, 255, 255, 0.822);
+  border-radius: 30px; 
+  border: #000000 2px solid; 
+}
+
+
+.tituloCaja {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+
+.cajaPokemon {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; 
+  background-color: rgb(211, 248, 248); 
+  padding: 20px;
+  border-radius: 30px;
+  transform-origin: center;
+  margin: 0 auto;
+}
+
+
+.tarjetaPokemon {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+
+.tarjetaPokemon:hover {
+  transform: scale(1.05);
+}
+
+.nombrePokemon {
+  font-size: 16px;
+  margin: 8px 0 4px 0;
+  color: #000000;
+}
+
+
+.descripcionPokemon {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+}
+
+
+.spritePokemon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 8px auto;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.spritePokemon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================= Filtros ================= */
+.filters {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter.selected {
+  background-color: #c4c4f7;
+  border-color: #888;
+}
+/* Escritorio grande = 6 columnas */
+.cajaPokemon {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; /* ejemplo */
+}
+
+/* Laptops / pantallas medianas */
+@media (max-width: 1200px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tablets grandes */
+@media (max-width: 992px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets chicas / phablets */
+@media (max-width: 768px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 576px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 400px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Ajustes en pantallas pequeñas y configuración de columnas y tarjetas de pokemon */
+@media (max-width: 576px) {
+  .cajaPokemon {
+    gap: 12px;
+    padding: 16px;
+    grid-template-columns: repeat(auto-fit , minmax(120px, 1fr));
+  }
+  .spritePokemon {
+    width: 72px;
+    height: 72px;
+  }
+  .nombrePokemon { 
+    font-size: 15px; 
+  }
+  .descripcionPokemon { 
+    font-size: 11px; 
+  }
+}
+
+.tamañobotones {
+  height: 50px;
+  width: 250px;
+  max-width: 400px !important;
+
+}
+.redondear {
+  border-radius: 50px !important;
+}
+.tamañobotone2 {
+  height: 50px;
+  width: 250px;
+  max-width: 400px !important;
+}
+.tamañobotoninicio {
+  background-color: #7fa7d1 !important;
+  height: 50px;
+}
+.separarbotones{
+  display: grid;
+  gap: 10px;
+}
+
+.fondoCaja {
+  margin-left: 200px;
+  margin-right: 20px; 
+}
+

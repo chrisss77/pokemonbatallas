@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.cajaPokemon {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #e0f7fa;
+}
+
+.tarjetaPokemon {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE - tablets */
+@media (max-width: 768px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* RESPONSIVE - móviles */
+@media (max-width: 480px) {
+  .cajaPokemon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - muy chico */
+@media (max-width: 350px) {
+  .cajaPokemon {
+    grid-template-columns: 1fr;
+  }
+}
